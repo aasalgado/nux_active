@@ -8,12 +8,10 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new'
 
-
   get "/pages/:page", to: "pages#show", as: :page
-
+  
   get "/orders", to: "orders#show" 
 
-
-
+  post "/add_to_order/:product_id", to: "order#add_to_order"
 
 end
