@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NuxActive</title>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="application.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+   <nav class="navbar-brand">
+      <img alt="Brand" src="http://i.imgur.com/mtLq4Hz.png"> 
+    </a>
+    <nav class="navbar-text">
+      <%=link_to "Shop All", products_path%> 
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <%=link_to "Our Story", page_path("about") %>
+              </nav>
+
+              <div class="cart">
+      <%= link_to orders_path do %>
+   <%= image_tag "http://i.imgur.com/NTllYDP.png?1" %>
+<% end %>
+
+      </div>
+</nav>
+
+
+
+
+
+
+
+      <% if current_user %>
+        Welcome, <%= current_user.name %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'Sign Out', session_path('dummy'), method: :delete %>
+      <% else %>
+        <%= link_to 'Sign In', login_path %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'Create Account', new_user_path %>
+      <% end %>
+
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+    <%= yield %>
+  </body>
+</html>

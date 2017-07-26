@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+.about {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 40px;
+    font-family: 'Crimson Text', serif;
+}
+
+
+.products-table {
+    text-align: center;
+    position: center;
+    font-family: 'Crimson Text', serif;
+    border-spacing: 50px;
+}
+
+.categories {
+    text-align: center;
+    position: center;
+    padding: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.cart {
+    align-content: right;
+    padding-right: 100px;
+    float: right;
+}
+
+.cart:hover {
+
+}
+
+
+
+td:hover img {
+    opacity: .5;
+	
+}
+
+.navbar-text {
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+}
+
+.navbar-brand {
+    padding-top: 50px;
+}
+
+.order-table {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 20px;
+    border-spacing: 30px;
+    font-family: 'Crimson Text', serif;
+
+}
+
+th {
+    color: gray;
+    font-size: 12px;
+    font-family: 'Crimson Text', serif;
+}
+
+.secondary {
+    background-color: black;
+    color: white;
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 10px;
+    width: 200px;
+}
+
+.shop {
+    background-color: black;
+    color: white;
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    right: 40px;
+    bottom: 80px;
+
+    
+
+}
+
+div.head {
+    background-color: yellow;
+    width: 1000px;
+    height: 380px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background-image: url("http://i.imgur.com/0gXWDN3.png?1");
+    position: relative;
+
+}
+
+
+
+div.motto {
+    background-color: white;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+    border: .5px solid #696969;
+    text-align: center;
+    font-size: 24px;
+}
+
+div.collage {
+    background-color: blue;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    border: .5px solid #696969;
+}
+
+div.subscribe {
+    background-color: purple;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    border: .5px solid #696969;
+}
+
+
+.nuxology {
+    font-size: 40px;
+    margin: 0 auto;
+    font-family: 'Crimson Text', serif;
+}
+
+.

@@ -1,0 +1,50 @@
+
+<h3> Shopping Cart </h3>
+
+
+<table class="order-table">
+  <thead>
+    <tr>
+      <th>ITEM</th>
+      <th>QTY.</th>
+      <th>PRICE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>< @product.name %></td>
+      <td><@product.quantity %></td>
+      <td>$<@product.price %></td>
+    </tr>
+    <tr>
+      <td><@product.name %></td>
+      <td><@product.quanity %></td>
+      <td>$<@product.price %></td>
+    </tr>
+    <tr>
+      <td><@product.name %></td>
+      <td><@product.quantity %></td>
+      <td>$<@product.price %></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Subtotal < @product.sum %></td> 
+    </tr>
+        <td></td>
+        <td></td>
+        <td><button type="button" class="secondary"> CHECKOUT  </button></td>
+    </tfoot>
+</table>
+
+
+
+
+</br>
+
+</br>
+
+<%= link_to "continue shopping", products_path %>
+<p>
