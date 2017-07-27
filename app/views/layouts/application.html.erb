@@ -11,27 +11,23 @@
 
   </head>
 
-  <body>
-<nav class="navbar-brand">
-  <%= link_to root_path do %>
-  <img alt="Brand" src="http://i.imgur.com/mtLq4Hz.png">
-  <% end %>
-  </nav>
-    <nav class="navbar-text">
-      <%=link_to "Shop All", products_path%> 
-      &nbsp;&nbsp;|&nbsp;&nbsp;
-      <%=link_to "Our Story", page_path("about") %>
-    </nav>
-
-
-
-    <div class="cart">
-    <%= link_to orders_path do %>
-    <%= image_tag "http://i.imgur.com/NTllYDP.png?1" %>
+<body>
+  <nav class="navbar-brand">
+    <%= link_to root_path do %>
+      <img alt="Brand" src="http://i.imgur.com/mtLq4Hz.png">
     <% end %>
-    </div>
-</nav>
+  </nav>
+  <nav class="navbar-text">
+    <%=link_to "Shop All", products_path%> 
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%=link_to "Our Story", page_path("about") %>
+  </nav>
 
+  <div class="cart">
+    <%= link_to orders_path do %>
+      <%= image_tag "http://i.imgur.com/NTllYDP.png?1" %>
+    <% end %>
+  </div>
 
       <% if current_user %>
         Welcome, <%= current_user.name %>
@@ -42,20 +38,6 @@
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'Create Account', new_user_path %>
       <% end %>
-
-      </div>
-    </div>
-  </header>
-
-
-
-
-
-
-
-
-
-
 
     <%= yield %>
   </body>
