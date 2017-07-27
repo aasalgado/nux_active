@@ -1,24 +1,26 @@
 class Order < ApplicationRecord
+    has_many :order_items
+    has_many :products, through: order_items 
 
-    has_many :products
+    def add_product(product_id)
+    product = Product.find(product_id)
+    if product.quantity <= 0 then return nil end
+    product.quantity = product.quantity - 1
+    product.save
 
-
-    def add_item(name)
-        item = items.where('name = ?', name).first
+   item = OrderItem.find_by(order: self, product: product)
     if item
-        product.quantity + 1
-        save
+      item.quantity = item.quantity + 1
+      item.save
     else
-        product = Product.find(name)
+      item = OrderItem.create(order: self, product: product, quantity: 1)
     end
-    save
-    end
-
-    def total_price
+    item
     end
 
     def show
         @orders = Order.all
     end
+
 
 end

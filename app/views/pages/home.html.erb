@@ -4,8 +4,11 @@
 <div class="head"> 
 
 
+<%= link_to products_path do %>
+   <button type="button" class="shop"> SHOP NOW </button> 
+<% end %>
 
- <button type="button" class="shop"> SHOP NOW </button>
+
 </div> 
 
 </br>
@@ -20,15 +23,25 @@ Dance through life with all of my imperfections.</br>
 Honor humility and be humbled by honorable people.</br>
 Compassion for the world starts with compassion for myself.</br>
 ......The universe is conspiring in my favor...</br>
+
 </p>
+
+
+<%= link_to page_path("about") do %>
+   <button type="button" class="story"> READ OUR STORY. </button> 
+<% end %>
 
 </div> 
 
 </br>
 
-<div class="collage"> 
+<div id="collage"> 
 
-<%=image_tag("http://i.imgur.com/gO9CVhc.png?1")%>
+<%=image_tag("http://i.imgur.com/byMyEIL.jpg?1")%>
+<%=image_tag("http://i.imgur.com/mGyQp42.jpg?1")%>
+<%=image_tag("http://i.imgur.com/3ujalSR.jpg?1")%>
+<%=image_tag("http://i.imgur.com/6jrlqoV.jpg?1")%>
+<%=image_tag("http://i.imgur.com/iCBf89P.jpg?1")%>
 
 
 
@@ -39,11 +52,32 @@ Compassion for the world starts with compassion for myself.</br>
 
 <div class="subscribe">
 
+<div class="container">
+	<form class="form-horizontal">
 
+<legend class="text-center">Subscribe To The Nux Active Newsletter!</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Your E-mail Address: </label>  
+  &nbsp;
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="E-mail" class="form-control input-md" required="">
+  &nbsp;
+
+  </div>
+
+<div class="form-group">
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-success">Submit!</button>
+  </div>
+</div>
+
+</form>
+</div>
+
+<p class="social">
 <%= link_to "Follow Us On Instagram!", "https://www.instagram.com/nuxactive/?hl=en" %>
-
-SUBSCRIBE ALSO GOES HERE
-
+</p>
 </div>
 
 

@@ -3,6 +3,7 @@
   <head>
     <title>NuxActive</title>
     <%= csrf_meta_tags %>
+    
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
 <!--    <link rel="stylesheet" type="text/css" href="application.css"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,27 +13,24 @@
 
   <body>
 
-   <nav class="navbar-brand">
-      <img alt="Brand" src="http://i.imgur.com/mtLq4Hz.png"> 
-    </a>
     <nav class="navbar-text">
       <%=link_to "Shop All", products_path%> 
-              &nbsp;&nbsp;|&nbsp;&nbsp;
-              <%=link_to "Our Story", page_path("about") %>
-              </nav>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <%=link_to "Our Story", page_path("about") %>
+    </nav>
 
-              <div class="cart">
-      <%= link_to orders_path do %>
-   <%= image_tag "http://i.imgur.com/NTllYDP.png?1" %>
-<% end %>
+<div class="brand">
+    <%= link_to root_path do %>
+    <img alt="Brand" src="http://i.imgur.com/mtLq4Hz.png">
+  <% end %>
+  </div>
 
-      </div>
+    <div class="cart">
+    <%= link_to orders_path do %>
+    <%= image_tag "http://i.imgur.com/NTllYDP.png?1" %>
+    <% end %>
+    </div>
 </nav>
-
-
-
-
-
 
 
       <% if current_user %>
