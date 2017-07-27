@@ -17,10 +17,11 @@
       <td><img src="<%= product.img_url %>"></br></td>
       <td><%= product.name %></br></td> 
       <td>$<%= product.price %></td>
-      <td> <% if current_user %> <%= link_to product_order_items_path(product), method: :post do %>
-           <button type="button" class="cartbutton"> ADD TO CART </button>
+      <td>
+        <% if current_user %> <%= link_to product_order_items_path(product), method: :post do %>
+          <button type="button" class="cartbutton"> ADD TO CART </button>
+        <% end %>
       </td>
-      <% end %>
     </tr>
   <% end %>
 

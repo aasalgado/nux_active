@@ -185,9 +185,9 @@ a {
     text-decoration: none;
 }
 
-/* :hover img {
+img:hover {
     opacity: .5;
-} */
+} 
 
 h3 {
     
@@ -253,3 +253,10 @@ p.social {
 i:active {
     color: none;
 }
+
+
+
+.container {
+    text-align: center;
+}
+

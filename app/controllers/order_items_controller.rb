@@ -19,9 +19,26 @@ class OrderItemsController < ApplicationController
         redirect_to products_path(current_user.cart)
     end
 
-    def remove_item product_id, order_items
-        order_items.delete(product_id)
+    def increase
+        item = OrderItem.find(params[:id])
+        item.quantity += 1
+        item.save
+        redirect_to order_path(item.order)
     end
+
+    def decrease
+        item = OrderItem.find(params[:id])
+        if item.quantity == 1
+            item.destroy
+        else 
+            item.quantity -= 1
+            item.save
+        end
+        redirect_to order_path(current_user.cart)
+    end
+
+
+
 
 
 

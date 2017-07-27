@@ -13,7 +13,10 @@ Rails.application.routes.draw do
     resources :order_items, shallow: true
   end 
   resources :orders
+  get "/order_items/:id/increase", to: "order_items#increase", as: :increase
 
+  get "/order_items/:id/decrease", to: "order_items#decrease", as: :decrease 
+  
   get "/checkout", to: "orders#checkout"
   
   resources :users, only: [:new, :create]
