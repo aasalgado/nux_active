@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/orders", to: "orders#show" 
 
   post "/add_to_order/:product_id", to: "order#add_to_order"
+  
 
 end
