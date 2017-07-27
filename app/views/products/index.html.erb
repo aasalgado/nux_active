@@ -1,50 +1,30 @@
-<h3>  </h3> 
 
+<h3>  </h3>
 
 <table class="categories" align="center">
-    <td><%= link_to "All" %>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-    <td><%= link_to "Bras" %>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-    <td><%= link_to "Leggings" %>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
-    <td><%= link_to "Outerwear" %></td>
+    <td><%= link_to "All", products_path %>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+    <td><%= link_to "Bras", products_bras_path %>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+    <td><%= link_to "Leggings", products_leggings_path %>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+    <td><%= link_to "Outerwear", products_outerwear_path %></td>
     
 </table>
 
-
-
-<p>
 <table style="width:75%" class="products-table" align="center">
 
-  <tr>
-    <td> <img src="http://i.imgur.com/QiNjY8U.jpg?1">  </br> Something Bra </br> $39.00 </td>
-    <td> <img src="http://i.imgur.com/jgZgreL.jpg?1">  </br> Something Bra </br> $39.00</td>
-    <td> <img src="http://i.imgur.com/byMyEIL.jpg?1">  </br> Something Bra </br> $39.00</td>
-    
-  </tr>
-  <tr>
-    <td> <img src="http://i.imgur.com/XbcjBbL.png?1">  </br> Something Bra </br> $39.00</td>
-    <td> <img src="http://i.imgur.com/XbcjBbL.png?1">  </br> Something Bra </br> $39.00</td> 
-    <td> <img src="http://i.imgur.com/XbcjBbL.png?1">  </br> Something Bra </br> $39.00</td>
-  </tr>
-  <tr>
-    <td> <img src="http://i.imgur.com/XbcjBbL.png?1">  </br> Something Bra </br> $39.00</td>
-    <td> <img src="http://i.imgur.com/XbcjBbL.png?1">  </br> Something Bra </br> $39.00</td> 
-    <td> <img src="http://i.imgur.com/XbcjBbL.png?1">  </br> Something Bra </br> $39.00</td>
-  </tr>
+  <% @products.each do |product| %> 
+
+    <tr>
+      <td><img src="<%= product.img_url %>"></br></td>
+      <td><%= product.name %></br></td> 
+      <td>$<%= product.price %></td>
+      <td> <% if current_user %> <%= link_to product_order_items_path(product), method: :post do %>
+           <button type="button" class="cartbutton"> ADD TO CART </button>
+      </td>
+      <% end %>
+    </tr>
+  <% end %>
+
+  <% end %>
+
 </table>
-
-
-
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,63 +1,33 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-
-<p>
-
-<h3> Shopping Cart </h3>
-
-</p>
+<h3><%= @order.is_cart ? "Shopping Cart" : "Order Number #{@order.id}" %></h3>
 
 <table class="order-table">
   <thead>
     <tr>
       <th>ITEM</th>
       <th>QTY.</th>
-      <th>PRICE</th>
+      <th>ITEM PRICE</th>
+      <th align="right">EXT. PRICE</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>< @product.name %></td>
-      <td><@product.quantity %></td>
-      <td>$<@product.price %></td>
-    </tr>
-    <tr>
-      <td><@product.name %></td>
-      <td><@product.quanity %></td>
-      <td>$<@product.price %></td>
-    </tr>
-    <tr>
-      <td><@product.name %></td>
-      <td><@product.quantity %></td>
-      <td>$<@product.price %></td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>Subtotal < @product.sum %></td> 
-    </tr>
-        <td></td>
-        <td></td>
-        <td><button type="button" class="secondary"> CHECKOUT  </button></td>
-    </tfoot>
+    <% if @order.order_items.count == 0 %>
+      <tr><td colspan="4" align="center">No Items in Your Cart!</td></tr>
+    <% else %>
+      <% total = 0 %>
+    <% @order.order_items.each do |item| %>
+      <tr>
+        <td><img src="<%= item.product.img_url %>" height="100"> </br> <%= item.product.name %> </td>
+        <td><%= item.quantity %></br></td> 
+        <td>$<%= item.product.price %></td>
+        <td align="right">$<%= item.product.price * item.quantity %></td>
+      </tr>
+      <% total += (item.product.price * item.quantity) %>
+    <% end %>
+      <tr><td colspan="3"></td><td align="right">Cart Total:&nbsp;&nbsp; $<%= total %></td></tr><% end %>
+      <tr><td colspan="3"></td><td align="right"><%= link_to checkout_path do %><button type="button" class="checkout_button">CHECKOUT</button><% end %></td></tr>
+  </tbody>
 </table>
-
-</br>
-
-</br>
 
 <%= link_to "continue shopping", products_path %>
 
 </body>
-</html>

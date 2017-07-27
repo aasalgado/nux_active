@@ -1,10 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-
-
-
-
   
 private
 
@@ -20,6 +16,5 @@ private
 
   def show
   end
-
 
 end

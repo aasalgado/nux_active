@@ -3,9 +3,10 @@
   <head>
     <title>NuxActive</title>
     <%= csrf_meta_tags %>
-    
+
+    <script src="https://use.fontawesome.com/932405239d.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
-<!--    <link rel="stylesheet" type="text/css" href="application.css"> -->
+<!--  <link rel="stylesheet" type="text/css" href="application.css"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -24,11 +25,15 @@
   </nav>
 
   <div class="cart">
-    <%= link_to orders_path do %>
-      <%= image_tag "http://i.imgur.com/NTllYDP.png?1" %>
+    <% if current_user %>
+    <%= link_to order_path(current_user.cart) do %>
+      <i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
+    <% end %>
+    <% else %>
+    <i class="fa fa-shopping-bag fa-2x" aria-hidden="true"></i>
     <% end %>
   </div>
-
+  
       <% if current_user %>
         Welcome, <%= current_user.name %>
         &nbsp;&nbsp;|&nbsp;&nbsp;

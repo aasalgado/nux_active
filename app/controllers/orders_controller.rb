@@ -1,18 +1,19 @@
 class OrdersController < ApplicationController
 
     def index
-        @orders = Order.all
+        @orders = current_user.orders.order(created_at: :desc)
     end
 
-    def add_to_order
-    current_order.add_item(params[:id])
+    def show
+        @order = Order.find(params[:id])
     end
 
-
-
-
-
-
+    def checkout
+        order = current_user.cart
+        order.is_cart = false
+        order.save
+        redirect_to order_path(order)
+    end
 
 end
 

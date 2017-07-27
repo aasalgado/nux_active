@@ -1,9 +1,24 @@
-<h2>THIS IS WHERE IF CUSTOMER HAS AN ITEMS EXISTING IN CART YOUR ITEMS WILL SHOW
+<h2>Previous Bags</h2>
 
+<table class="order-table">
+<tbody>
+    <thead><th>Order Date :</th>
+        <% @orders.each do |order| %>
+            <tr>
+                <% if order.is_cart %>
+                    <td><%= link_to order.updated_at.to_formatted_s(:long), order_path(order) %></td>
+                <% else %>
+                    <td><%= link_to order.updated_at.to_formatted_s(:long), order_path(order) %></td>
+                <% end %>
+            </tr>
+        <% end %>
+</tbody>
+</table>
 
-IF NOT IT SHOWS EMPTY CART </h2>
 
 <%= link_to "continue shopping", products_path %>
+
+</body>
 
 
 
