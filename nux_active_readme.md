@@ -87,5 +87,5 @@ There are a couple things to know when you land on the Nux Home Page. They're il
   <br>
 
 <h4 align="center">
-  <img src="/readme_images/thankyou.pngg">
+  <img src="/readme_images/thankyou.png">
 </h4>
