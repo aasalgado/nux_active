@@ -1,4 +1,4 @@
-<h2>Previous Bags</h2>
+<h3>Previous Bags</h3>
 
 <table class="order-table">
 <tbody>
@@ -6,18 +6,18 @@
         <% @orders.each do |order| %>
             <tr>
                 <% if order.is_cart %>
-                    <td><%= link_to order.updated_at.to_formatted_s(:long), order_path(order) %></td>
+                    <td> <i class="fa fa-shopping-bag" aria-hidden="true"> &nbsp;&nbsp; <%= link_to order.updated_at.to_formatted_s(:long), order_path(order) %></i></td>
                 <% else %>
-                    <td><%= link_to order.updated_at.to_formatted_s(:long), order_path(order) %></td>
+                    <td <i class="fa fa-shopping-bag" aria-hidden="true"> &nbsp;&nbsp; <%= link_to order.updated_at.to_formatted_s(:long), order_path(order) %></i></td>
                 <% end %>
             </tr>
         <% end %>
 </tbody>
 </table>
 
-
-<%= link_to "continue shopping", products_path %>
-
+<%= link_to products_path do %>
+   <button type="button" class="cartbutton"> BACK TO SHOPPING </button> 
+<% end %>
 </body>
 
 

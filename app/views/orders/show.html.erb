@@ -18,7 +18,6 @@
       <tr>
         <td><img src="<%= item.product.img_url %>" height="100"> </br> <%= item.product.name %> </td>
         <td>
-
           <%= link_to "+", increase_path(item) if current_user && @order.is_cart %>
           <%= item.quantity %>
           <%= link_to "-", decrease_path(item) if current_user && @order.is_cart %>
@@ -26,15 +25,18 @@
         <td>$<%= item.product.price %></td>
         <td align="right">$<%= item.product.price * item.quantity %></td>
       </tr>
-      <% total += (item.product.price * item.quantity) %>
+    <% total += (item.product.price * item.quantity) %>
     <% end %>
-      <tr><td colspan="3"></td><td align="right">Cart Total:&nbsp;&nbsp; $<%= total %></td></tr><% end %>
-      <tr><td colspan="3"></td><td align="right">
-        <% if @order.is_cart && @order.order_items.count > 0 %><%= link_to checkout_path do %><button type="button" class="checkout_button">CHECKOUT</button><% end %><% end %>
-      </td></tr>
+      <tr>
+        <td colspan="3"></td><td align="right">Cart Total:&nbsp;&nbsp; $<%= total %></td></tr><% end %>
+      <tr>
+        <td colspan="3"></td><td align="right">
+        <% if @order.is_cart && @order.order_items.count > 0 %><%= link_to page_path("congrats") do %><button type="button" class="checkout_button">CHECKOUT</button><% end %><% end %></td>
+      </tr>
   </tbody>
 </table>
 
 <%= link_to "continue shopping", products_path %>
 
 </body>
+

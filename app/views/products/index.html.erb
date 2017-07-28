@@ -16,7 +16,7 @@
     <tr>
       <td>
       <% if current_user && current_user.admin == true %>
-          <%= link_to "-", product_path(product), method: :delete, data: { confirm: "are you sure?" }%>
+      <%= link_to product_path(product), method: :delete, data:{ confirm: "are you sure?"} do %><i class="fa fa-trash-o" aria-hidden="true"></i><% end %>
       <% end %>
       <img src="<%= product.img_url %>"></br></td>
       <td><%= product.name %></br></td> 

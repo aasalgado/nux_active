@@ -21,10 +21,13 @@ body {
 }
 
 .about {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
-    padding-top: 40px;
     font-family: 'Crimson Text', serif;
+    background-color: #E0E0E0;
+    text-align: center;
+    font-size: 16px;
+    
 }
 
 
@@ -77,6 +80,10 @@ body {
 
 }
 
+.order-table:hover {
+    text-decoration: none;
+}
+
 th {
     color: gray;
     font-size: 12px;
@@ -118,7 +125,6 @@ button.story {
 
 
 div.head {
-    background-color: yellow;
     width: 1000px;
     height: 380px;
     margin: 0 auto;
@@ -233,6 +239,7 @@ button:hover {
 
 p.social {
     font-size: 20px;
+    text-align: center;
     
 }
 
@@ -264,5 +271,37 @@ i:active {
 
 .container {
     text-align: center;
+}
+
+.form {
+    text-align: center;
+}
+
+
+div.congrats {
+    text-align: center;
+}
+
+p#congrats {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    color: gray;
+
+}
+
+#congrats-btn {
+    background-color: black;
+    color: white;
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 10px;
+    width: 200px;
+}
+
+#congrats-btn:hover {
+    background-color: white;
+    color: black;
+    border-style: solid;
+
 }
 
