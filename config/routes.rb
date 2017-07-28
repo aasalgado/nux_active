@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'pages#show', page: 'home'
+  root "pages#show", page: "home"
   
   get "/products/bras", to: "products#bras"
 
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  get '/login', to: 'sessions#new'
+  get "/login", to: "sessions#new"
 
   get "/pages/:page", to: "pages#show", as: :page
 

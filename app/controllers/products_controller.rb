@@ -2,10 +2,7 @@ class ProductsController < ApplicationController
 
 
   def index
-    puts '--------'
     puts params[:category]
-    puts '--------'
-
     category = params[:category]
     puts category
     if category
