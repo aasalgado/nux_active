@@ -2,7 +2,20 @@ class ProductsController < ApplicationController
 
 
   def index
-    @products = Product.all
+    puts '--------'
+    puts params[:category]
+    puts '--------'
+
+    category = params[:category]
+    puts category
+    if category
+      puts 'filter the products'
+      @products = Product.where(:category => category).all
+    else 
+      puts 'show all the products'
+      @products = Product.all
+    end
+
   end
 
   def update
@@ -15,6 +28,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @products = Product.all
   end
 
   def destroy 
@@ -24,7 +38,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params.require(:product).permit(:name, :img_url, :price, :description))
+    @product = Product.new(params.require(:product).permit(:name, :img_url, :price, :description, :category))
     if @product.save
       redirect_to products_path
     else
