@@ -48,20 +48,69 @@ There are a couple things to know when you land on the Nux Home Page. They're il
 
 <br>
 
+<br>
+<h4 align="center">
+  <img src="/readme_images/nuxology.png">
+</h4>
+
+<br>
+
+- <u>NUXOLOGY</u>
+  - In the center of our page we have the Nuxology Mantra, with a link to read more about the company.
+- <u>NUX ACTIVE COLLAGE</u>
+  - Still in Progress, this is a running photo collage of NUX Activewear in the real world.
+
+<br>
+
+
+<br>
+
+<h4 align="center">
+  <img src="/readme_images/social.png">
+</h4>
+
+<br>
+
+- <u>SUBSCRIBE</u>
+  - Fill in your email to stay up to date!
+- <u>SOCIAL</u>
+  - This link will take you to our NUX Active Instagram
+<br>
+
+
   ---
   ---
+
+
+<h4 align="center">
+  <img src="/readme_images/techused.png">
+</h4>
+
+<br>
+
+- <u>TECHNOLOGIES USED:</u>
+  - Ruby on Rails
+  - HTML
+  - CSS
+  - Pages (for editing photos)
+
+<br>
+
+
+  ---
+  ---
+
 
 <h4 align="center">
   <img src="readme_images/gettingstarted.png">
 </h4>
-
 
 <center><b>
 
 [CLICK ME TO VIEW TRELLO](https://trello.com/b/soJoGfdE/nux-active)
 
 
-[CLICK ME TO VIEW NUX ACTIVE SITE](https://trello.com/b/soJoGfdE/nux-active)
+[CLICK ME TO VIEW NUX ACTIVE SITE](https://nux-active.herokuapp.com/)
 
 </b></center>
 
