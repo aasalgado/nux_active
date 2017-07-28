@@ -1,4 +1,4 @@
-<h3><%= @order.is_cart ? "Shopping Cart" : "Order Number #{@order.id}" %></h3>
+<h3 class="cart-head"><%= @order.is_cart ? "Shopping Cart" : "Order Number #{@order.id}" %></h3>
 
 <table class="order-table">
   <thead>
@@ -37,7 +37,14 @@
 </table>
 
 <%= link_to orders_path do %>
-   <button type="button" id="shop"> PREVIOUS ORDERS </button> 
+   <button type="button" class="shopping-button"> VIEW PREVIOUS ORDERS </button> 
+<% end %>
+</br>
+
+</br>
+
+<%= link_to products_path do %>
+   <button type="button" class="shopping-button"> BACK TO SHOPPING </button> 
 <% end %>
 
 </body>
