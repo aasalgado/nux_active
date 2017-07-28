@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get "/login", to: "sessions#new"
 
+  get "/users/new", to: "users#create"
+
   get "/pages/:page", to: "pages#show", as: :page
 
 end

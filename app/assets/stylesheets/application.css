@@ -273,11 +273,6 @@ i:active {
     text-align: center;
 }
 
-.form {
-    text-align: center;
-}
-
-
 div.congrats {
     text-align: center;
 }
@@ -305,3 +300,8 @@ p#congrats {
 
 }
 
+.form {
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    
+}
