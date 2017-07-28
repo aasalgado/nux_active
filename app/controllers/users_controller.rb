@@ -14,7 +14,8 @@ class UsersController < ApplicationController
             flash[:notice] = "You have Successfully Signed In"
             redirect_to root_path
         else
-            render :new
+            flash[:alert] = "Invalid Fields: Password May Be Incorrect"
+            redirect_to new_user_path
         end
     end
     

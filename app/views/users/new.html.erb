@@ -1,6 +1,13 @@
+
+
+
 <div class="form">
 
 <h3> Create an Account </h3> 
+
+<% if flash[:alert] %> 
+  <div><%= flash[:alert] %> </div>
+<% end %>
 
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
@@ -13,20 +20,20 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
+  <div class="field username">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field email">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
+  <div class="field password">
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation %>
+  <div class="field password-conf">
+    <%= f.label :confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit %></div>

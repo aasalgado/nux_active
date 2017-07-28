@@ -293,3 +293,30 @@ p#congrats {
 i:active {
     color: none;
 }
+
+
+.username {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 5px;
+    
+
+}
+
+.password {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 5px;
+    position: relative;
+    right: 10px;
+
+}
+
+.password-conf {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding-bottom: 10px;
+    position: relative;
+    right: 22px;
+
+}
