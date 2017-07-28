@@ -46,7 +46,7 @@ body {
 .cart {
     align-content: right;
     padding-right: 250px;
-    padding-top: 30px;
+    padding-top: 50px;
     float: right;
     position: relative;
     z-index: 100;
@@ -142,21 +142,26 @@ div.motto {
 }
 
 #collage {
-    background-color: blue;
     width: 1000px;
-    height: 600px;
+    height: 500px;
     margin: 0 auto;
-    padding: 40px 0;
+    box-sizing: content-box;
     border: .5px solid #696969;
     line-height: 0;
     -webkit-column-count: 5;
     -webkit-column-gap: 0px;
     -moz-column-count: 5;
     -moz-column-gap: 0px;
-    column-count: 5;
+    column-count: 6;
     column-gap: 0px;  
 
 }
+
+#collage img {
+  width: 100% !important;
+  height: auto !important;
+}
+
 
 div.subscribe {
     width: 1000px;
@@ -188,6 +193,7 @@ a {
 img:hover {
     opacity: .5;
 } 
+
 
 h3 {
     
