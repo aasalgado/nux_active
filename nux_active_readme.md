@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="nux_active/readme_images/logo.png">
+  <img src="/readme_images/logo.png">
 </h4>
 
 <center>
@@ -29,7 +29,7 @@ perhaps not always perfect, but confident that she is capable, knowledgeable and
 There are a couple things to know when you land on the Nux Home Page. They're illustrated in the image below. 
 
 <h4 align="center">
-  <img src="nux_active/readme_images/main.png">
+  <img src="/readme_images/main.png">
 </h4>
 
 <br>
@@ -52,7 +52,7 @@ There are a couple things to know when you land on the Nux Home Page. They're il
   ---
 
 <h4 align="center">
-  <img src="nux_active/readme_images/gettingstarted.png">
+  <img src="readme_images/gettingstarted.png">
 </h4>
 
 
@@ -87,5 +87,5 @@ There are a couple things to know when you land on the Nux Home Page. They're il
   <br>
 
 <h4 align="center">
-  <img src="nux_active/readme_images/thankyou.pngg">
+  <img src="/readme_images/thankyou.pngg">
 </h4>
