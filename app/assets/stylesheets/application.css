@@ -292,8 +292,6 @@ i:active {
     font-family: 'Crimson Text', serif;
     border: none;
     padding: 5px;
-    
-
 }
 
 .password {
@@ -305,6 +303,7 @@ i:active {
 
 }
 
+
 .password-conf {
     font-family: 'Crimson Text', serif;
     border: none;
@@ -312,6 +311,46 @@ i:active {
     position: relative;
     right: 22px;
 
+}
+
+
+.add-username {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 5px;
+    position: relative;
+    right: 19px;
+}
+
+.add-category {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 5px;
+    position: relative;
+    right: 35px;
+}
+
+.upload-img {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 5px;
+    position: relative;
+    right: 14px;
+
+}
+
+.add-price {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding: 5px;
+    position: relative;
+    right: 20px;
+}
+.add-description {
+    font-family: 'Crimson Text', serif;
+    border: none;
+    padding-bottom: 10px;
+    position: relative;
 }
 
 .shopping-button {
