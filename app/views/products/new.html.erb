@@ -1,0 +1,41 @@
+
+<div class="form">
+
+<h3> Add Products </h3> 
+
+<%= form_for @product do |f| %>
+  <% if @product.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @product.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :img_url %>
+    <%= f.text_field :img_url %>
+  </div>
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.select :category, options_for_select([['bra'], ['legging'], ['outerwear']], params[:category]) %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions"><%= f.submit %></div>
+<% end %>
+
+</div> 

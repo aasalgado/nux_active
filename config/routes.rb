@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   get "/products/outerwear", to: "products#outerwear"
 
-  
   resources :products do 
     resources :order_items, shallow: true
   end 
@@ -26,6 +25,8 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
 
   get "/pages/:page", to: "pages#show", as: :page
+
+
 
 
 

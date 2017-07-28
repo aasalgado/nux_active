@@ -14,7 +14,11 @@
   <% @products.each do |product| %> 
 
     <tr>
-      <td><img src="<%= product.img_url %>"></br></td>
+      <td>
+      <% if current_user && current_user.admin == true %>
+          <%= link_to "-", product_path(product), method: :delete, data: { confirm: "are you sure?" }%>
+      <% end %>
+      <img src="<%= product.img_url %>"></br></td>
       <td><%= product.name %></br></td> 
       <td>$<%= product.price %></td>
       <td>

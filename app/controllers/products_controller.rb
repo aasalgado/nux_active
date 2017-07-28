@@ -17,4 +17,25 @@ class ProductsController < ApplicationController
   def show
   end
 
+  def destroy 
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to(products_path)
+  end
+
+  def create
+    @product = Product.new(params.require(:product).permit(:name, :img_url, :price, :description))
+    if @product.save
+      redirect_to products_path
+    else
+      render :new
+    end
+  end
+
+  def new
+    @product =  Product.new 
+  end
+
+
+
 end

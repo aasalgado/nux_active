@@ -22,6 +22,12 @@
     <%=link_to "Shop All", products_path%> 
     &nbsp;&nbsp;|&nbsp;&nbsp;
     <%=link_to "Our Story", page_path("about") %>
+    <% if current_user && current_user.admin == true %> 
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%=link_to "Add Products", new_product_path %>
+    <% end %>
+
+
   </nav>
 
   <div class="cart">
